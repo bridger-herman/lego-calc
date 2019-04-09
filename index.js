@@ -1,4 +1,5 @@
-const IMG_PATH = '/img/';
+const DEPLOY_PATH = '/lego-calc'
+const IMG_PATH = DEPLOY_PATH + '/img/';
 const IMG_EXT = '.png';
 const NAMES = [
   'lego_gray_small',
@@ -13,13 +14,18 @@ const CANVAS = document.getElementById('lego');
 function plotLegos(values) {
   let ctx = CANVAS.getContext('2d');
   let pieceCount = 0;
+  ctx.beginPath();
   for (var i in NAMES) {
     let img = document.getElementById(NAMES[i]);
     for (var piece = 0; piece < values[i]; piece++) {
-      ctx.drawImage(img, 0, img.height * 0.3 * pieceCount, 50, 50);
+      let yCoord = img.height * 0.3 * pieceCount;
+      ctx.drawImage(img, 0, yCoord, 50, 50);
+      ctx.moveTo(25, yCoord + 10);
+      ctx.lineTo(25, yCoord);
       pieceCount++;
     }
   }
+  ctx.stroke();
 }
 
 function init() {
