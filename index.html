@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lego Test</title>
+</head>
+<body>
+    <img src="/assets/img/lego_gray.png" id="pic">
+    <canvas id="lego" width="500" height="500"></canvas>
+
+    <script>
+        // let img = document.createElement('img');
+        // img.src = '/assets/img/lego_gray.png';
+        // img.width = 10;
+        // document.body.appendChild(img);
+        let img = document.getElementById('pic');
+
+        let canvas = document.getElementById('lego');
+        let ctx = canvas.getContext('2d');
+        ctx.drawImage(img, 0, 0);
+    </script>
+</body>
+</html>
