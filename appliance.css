@@ -1,3 +1,13 @@
+.appliance {
+  width: 120px;
+  height: 120px;
+  border: 1px solid gray;
+  background: #ddd;
+  border-radius: 5px;
+  padding: 5px;
+  display: inline-block;
+}
+
 #appliance-chooser {
   width: 100vw;
   display: inline-block;
@@ -11,17 +21,24 @@
 .appliance img {
   width: 70%;
   height: 70%;
-  align-self: center;
+  margin: auto;
 }
+
 
 .appliance-title {
   font-weight: bold;
 }
 
 .slider {
-  display: none;
+  width: 110px;
 }
 
-.value-output {
-  display: none;
+.appliance-input div {
+  display: inline-block;
+  margin: 0 5px;
+}
+
+.appliance-input p {
+  padding: 0;
+  margin: 0;
 }

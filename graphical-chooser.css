@@ -9,23 +9,9 @@
 }
 
 #house {
-  width: 100vw;
-  margin: 50px;
-}
-
-.appliance {
-  width: 100px;
-  height: 100px;
-  border: 1px solid black;
-  background: #ddd;
-}
-
-.appliance>input {
-  width: 100%;
-}
-
-.row{
-  display: flex;
-  margin-left: -200px;
-  margin-right: -100px;
+  width: 75vw;
+  height: 65vh;
+  background-image: url('./img/house.png');
+  background-repeat: no-repeat;
+  background-size: 100% auto;
 }
