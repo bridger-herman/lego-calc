@@ -1,5 +1,9 @@
 function setup() {
+  plotLegos([1, 0, 0, 0]);
+
   $('.appliance').draggable();
+  $('#refrigerator').draggable('disable');
+
   $('.room').droppable({
     accept: '.appliance',
     // https://stackoverflow.com/a/6003729
@@ -11,24 +15,32 @@ function setup() {
       $(dropped).draggable('disable');
 
       $(droppedOn).find('.appliance-input').append(
-        $('<div/>')
-        .append($('<input/>', {
-            type: 'range',
-            class: 'slider',
-            id: `${droppedId}-input`,
-            min: '0',
-            max: '24',
-            value: '0',
-        }))
-        .append($('<p/>', {
-          class: 'value-output',
-          text: '0 Hours',
-        }))
+          $('<div/>')
+          .append($('<input/>', {
+              type: 'range',
+              class: 'slider',
+              id: `${droppedId}-input`,
+              min: '0',
+              max: '14',
+              value: '0',
+          }))
+          .append($('<p/>', {
+            class: 'value-output',
+            text: '0 Times/Week',
+          }))
       );
+
       $('.slider').on('input', (evt) => {
         let val = $(evt.target).val();
-        $(evt.target).parent().find('.value-output').html(`${val} Hours`);
+        $(evt.target).parent().find('.value-output').html(`${val} Times/Week`);
+        let usage = calculateEnergyUsage();
+        plotLegos(calculateNumLegos(usage));
+        $('#usage-kwh').html(`${totalEnergyUsage(usage)} kWh`);
       });
+
+      let usage = calculateEnergyUsage();
+      plotLegos(calculateNumLegos(usage));
+      $('#usage-kwh').html(`${totalEnergyUsage(usage)} kWh`);
     },
   });
 }
