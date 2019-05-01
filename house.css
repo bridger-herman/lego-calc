@@ -8,8 +8,8 @@
 }
 
 .room {
-  width: 100%;
-  height: 50vh;
+  position: absolute;
+  height: 220px;
   border: 1px solid black;
 }
 
@@ -21,4 +21,28 @@
 .appliance-input p {
   padding: 0;
   margin: 0;
+}
+
+#electronics {
+  top: calc(20vh + 150px);
+  left: 230px;
+  width: 490px;
+}
+
+#hvac {
+  top: calc(20vh + 150px);
+  left: 30px;
+  width: 200px;
+}
+
+#laundry {
+  top: calc(20vh + 370px);
+  left: 30px;
+  width: 270px;
+}
+
+#kitchen {
+  top: calc(20vh + 370px);
+  left: 300px;
+  width: 550px;
 }

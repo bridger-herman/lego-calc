@@ -9,9 +9,12 @@
 }
 
 #house {
-  width: 75vw;
-  height: 65vh;
+  position: absolute;
+  top: 153px;
+  width: 901px;
+  height: 716px;
   background-image: url('./img/house.png');
   background-repeat: no-repeat;
   background-size: 100% auto;
+  z-index: -1;
 }
