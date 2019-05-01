@@ -1,5 +1,11 @@
-.appliance {
-  width: 90%;
+#appliance-chooser {
+  width: 100vw;
+  display: inline-block;
+}
+
+.card {
+  width: 10vw;
+  display: inline-block;
 }
 
 .appliance img {
@@ -12,6 +18,10 @@
   font-weight: bold;
 }
 
-.card {
-  display: inline-block;
+.slider {
+  display: none;
+}
+
+.value-output {
+  display: none;
 }
