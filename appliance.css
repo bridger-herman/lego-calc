@@ -32,13 +32,3 @@
 .slider {
   width: 110px;
 }
-
-.appliance-input div {
-  display: inline-block;
-  margin: 0 5px;
-}
-
-.appliance-input p {
-  padding: 0;
-  margin: 0;
-}

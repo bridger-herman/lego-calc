@@ -7,74 +7,107 @@
     <link rel="stylesheet" href="./graphical-chooser.css">
     <link rel="stylesheet" href="./appliance.css">
     <link rel="stylesheet" href="./house.css">
+    <link rel="stylesheet" href="./lego-gadget.css">
   </head>
   <body>
     <div class="small-tron">
       <!-- <h1 class="display-4 text-center">Energy Consumption</h1> -->
       <p class="lead text-center">
-        Drag the appliances you own into the house, then select your usage!
+      Drag the appliances you own into the house, then select your usage!
       </p>
     </div>
 
     <!--- start of the appliances selection-->
-    <div id="appliance-chooser" class="container">
-      <div class="appliance" id="refrigerator">
-        <img src = "./img/fridge.jpg">
-        <p class="appliance-title">Refrigerator</p>
+    <div class="layout">
+      <div class="layout-left">
+        <div id="appliance-chooser" class="container">
+          <div class="appliance" id="refrigerator">
+            <img src = "./img/fridge.jpg">
+            <p class="appliance-title">Refrigerator</p>
+          </div>
+          <div class="appliance" id="electric-stove">
+            <img src = "./img/stove.jpg">
+            <p class="appliance-title">Electric Stove</p>
+          </div>
+          <div class="appliance" id="gas-stove">
+            <img src = "./img/stove.jpg">
+            <p class="appliance-title">Gas Stove</p>
+          </div>
+          <div class="appliance" id="microwave">
+            <img src = "./img/microwave.jpg">
+            <p class="appliance-title">Microwave</p>
+          </div>
+          <div class="appliance" id="gas-oven">
+            <img src = "./img/oven.jpg">
+            <p class="appliance-title">Gas Oven</p>
+          </div>
+          <div class="appliance" id="electric-oven">
+            <img src = "./img/oven.jpg">
+            <p class="appliance-title">Electric Oven</p>
+          </div>
+
+
+          <div class="appliance" id="dryer"><img src = "./img/dryer.jpg">
+            <p class="appliance-title">Dryer</p>
+          </div>
+          <div class="appliance" id="washer"><img src = "./img/washer.jpg">
+            <p class="appliance-title">Washer</p>
+          </div>
+
+          <div class="appliance" id="laptop"><img src = "./img/laptop.png">
+            <p class="appliance-title">Laptop</p>
+          </div>
+          <div class="appliance" id="phone"><img src = "./img/phone.jpg">
+            <p class="appliance-title">Phone</p>
+          </div>
+          <div class="appliance" id="tv"><img src = "./img/tv.jpeg">
+            <p class="appliance-title">TV</p>
+          </div>
+
+          <div class="appliance" id="window-ac"><img src = "./img/ac.jpeg">
+            <p class="appliance-title">Window A/C</p>
+          </div>
+          <div class="appliance" id="central-ac"><img src = "./img/central_ac.jpg">
+            <p class="appliance-title">Central A/C</p>
+          </div>
+        </div>
+
+        <!-- <div> -->
+        <!-- <h3>Appliances in your house</h5> -->
+        <!-- <div id="house"></div> -->
+        <!-- </div> -->
+        <div class="room" id="kitchen">
+          <p>Kitchen</p>
+          <div class="appliance-drop"></div>
+          <div class="appliance-input"></div>
+        </div>
+        <div class="room" id="hvac">
+          <p>HVAC</p>
+          <div class="appliance-drop"></div>
+          <div class="appliance-input"></div>
+        </div>
+        <div class="room" id="electronics">
+          <p>Electronics</p>
+          <div class="appliance-drop"></div>
+          <div class="appliance-input"></div>
+        </div>
+        <div class="room" id="laundry">
+          <p>Laundry</p>
+          <div class="appliance-drop"></div>
+          <div class="appliance-input"></div>
+        </div>
       </div>
-      <div class="appliance" id="electric-stove">
-        <img src = "./img/stove.jpg">
-        <p class="appliance-title">Electric Stove</p>
+
+      <div class="lego-gadget">
       </div>
-      <div class="appliance" id="microwave">
-        <img src = "./img/microwave.jpg">
-        <p class="appliance-title">Microwave</p>
-      </div>
-      <div class="appliance" id="oven">
-        <img src = "./img/oven.jpg">
-        <p class="appliance-title">Oven</p>
-      </div>
-
-
-      <!-- <div class="appliance" id="dryer"><img src = "./img/dryer.jpg"> -->
-        <!-- <p class="appliance-title">Dryer</p> -->
-      <!-- </div> -->
-      <!-- <div class="appliance" id="washer"><img src = "./img/washer.jpg"> -->
-        <!-- <p class="appliance-title">Washer</p> -->
-      <!-- </div> -->
-
-      <!-- <div class="appliance" id="laptop"><img src = "./img/laptop.png"> -->
-        <!-- <p class="appliance-title">Laptop</p> -->
-      <!-- </div> -->
-      <!-- <div class="appliance" id="phone"><img src = "./img/phone.jpg"> -->
-        <!-- <p class="appliance-title">Phone</p> -->
-      <!-- </div> -->
-      <!-- <div class="appliance" id="tv"><img src = "./img/tv.jpeg"> -->
-        <!-- <p class="appliance-title">TV</p> -->
-      <!-- </div> -->
-
-      <!-- <div class="appliance" id="ac"><img src = "./img/ac.jpeg"> -->
-        <!-- <p class="appliance-title">AC</p> -->
-      <!-- </div> -->
-      <!-- <div class="appliance" id="heating"><img src = "./img/heat.jpg"> -->
-        <!-- <p class="appliance-title">Heating</p> -->
-      <!-- </div> -->
-
     </div>
 
-    <!-- <div> -->
-      <!-- <h3>Appliances in your house</h5> -->
-      <!-- <div id="house"></div> -->
-    <!-- </div> -->
-    <div class="room" id="kitchen">
-      <div class="appliance-drop"></div>
-      <div class="appliance-input"></div>
-    </div>
 
     <script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
     <script src="http://code.jquery.com/ui/1.8.21/jquery-ui.min.js"></script>
     <script src="./jquery.ui.touch-punch.min.js"></script>
 
+    <script src="./energyCalc.js"></script>
     <script src="./dragPic.js"></script>
 
   </body>

@@ -1,5 +1,24 @@
+.layout {
+  width: 100vw;
+  display: flex;
+}
+
+.layout-left {
+  width: 88%;
+}
+
 .room {
   width: 100%;
-  height: 130px;
+  height: 50vh;
   border: 1px solid black;
+}
+
+.appliance-input div {
+  display: inline-block;
+  margin: 0 5px;
+}
+
+.appliance-input p {
+  padding: 0;
+  margin: 0;
 }
