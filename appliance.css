@@ -1,0 +1,17 @@
+.appliance {
+  width: 90%;
+}
+
+.appliance img {
+  width: 70%;
+  height: 70%;
+  align-self: center;
+}
+
+.appliance-title {
+  font-weight: bold;
+}
+
+.card {
+  display: inline-block;
+}
