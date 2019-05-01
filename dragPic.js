@@ -14,25 +14,42 @@ function setup() {
       $(dropped).detach().css({top: 0, left: 0}).appendTo($(droppedOn).find('.appliance-drop'));
       $(dropped).draggable('disable');
 
+      let minMaxValStep = [0, 14, 1];
+      let defaultText = '0 Times/Week';
+      if ($(dropped).hasClass('percentage')) {
+        minMaxValStep = [0, 1, 0.1];
+        defaultText = 'Running 0% time';
+      } else if ($(dropped).hasClass('hourly')) {
+        minMaxValStep = [0, 24, 2];
+        defaultText = '0 Hours/Day';
+      }
+
       $(droppedOn).find('.appliance-input').append(
           $('<div/>')
           .append($('<input/>', {
               type: 'range',
               class: 'slider',
               id: `${droppedId}-input`,
-              min: '0',
-              max: '14',
-              value: '0',
+              min: minMaxValStep[0],
+              max: minMaxValStep[1],
+              value: 0,
+              step: minMaxValStep[2],
           }))
           .append($('<p/>', {
             class: 'value-output',
-            text: '0 Times/Week',
+            text: defaultText,
           }))
       );
 
       $('.slider').on('input', (evt) => {
         let val = $(evt.target).val();
-        $(evt.target).parent().find('.value-output').html(`${val} Times/Week`);
+        let fstr = `${val} Times/Week`;
+        if ($(dropped).hasClass('percentage')) {
+          fstr = `Running ${val * 100}% time`;
+        } else if ($(dropped).hasClass('hourly')) {
+          fstr = `${val} Hours/Day`;
+        }
+        $(evt.target).parent().find('.value-output').html(fstr);
         let usage = calculateEnergyUsage();
         plotLegos(calculateNumLegos(usage));
         $('#usage-kwh').html(`${totalEnergyUsage(usage)} kWh`);
