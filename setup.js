@@ -101,9 +101,13 @@ function setup() {
       $('.slider').on('input', (evt) => {
         let val = $(evt.target).val();
         let fstr = `${val} Times/Week`;
-        if ($(dropped).hasClass('percentage')) {
+
+        let inputIndex = evt.target.id.indexOf('-input');
+        let applianceId = evt.target.id.substring(0, inputIndex);
+
+        if ($(`#${applianceId}`).hasClass('percentage')) {
           fstr = `Running ${val * 100}% time`;
-        } else if ($(dropped).hasClass('hourly')) {
+        } else if ($(`#${applianceId}`).hasClass('hourly')) {
           fstr = `${val} Hours/Day`;
         }
         $(evt.target).parent().find('.value-output').html(fstr);
