@@ -1,3 +1,30 @@
+const GROUPS = {
+  // Kitchen
+  'electric-stove': 'kitchen',
+  'gas-stove': 'kitchen',
+  'electric-oven': 'kitchen',
+  'electric-oven': 'kitchen',
+  'toaster': 'kitchen',
+  'microwave': 'kitchen',
+  'dishwasher': 'kitchen',
+  'refrigerator': 'kitchen',
+
+  // Laundry
+  'electric-dryer': 'laundry',
+  'gas-dryer': 'laundry',
+  'washer': 'laundry',
+
+  // HVAC
+  'window-ac': 'hvac',
+  'central-ac': 'hvac',
+
+  // Electronics
+  'smartphone': 'electronics',
+  'laptop': 'electronics',
+  'desktop': 'electronics',
+  'tv': 'electronics',
+};
+
 const FINAL_TEXT =
 'Now, construct your Lego tower with the Legos provided in the bins! ' +
 'Follow the example towers that already exist on the Lego grid of the metro area. ' +
@@ -61,7 +88,9 @@ function setup() {
     drop: (evt, ui) => {
       let droppedId = $(ui.draggable).attr('id');
       let dropped = ui.draggable;
-      let droppedOn = $(evt.target);
+      // let droppedOn = $(evt.target); // Don't actually care where they
+      // dropped it, want to move it to the right place
+      let droppedOn = $(`#${GROUPS[droppedId]}`);
       $(dropped).detach().css({top: 0, left: 0}).appendTo($(droppedOn).find('.appliance-drop'));
       $(dropped).draggable('disable');
 
