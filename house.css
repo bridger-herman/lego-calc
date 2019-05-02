@@ -1,3 +1,14 @@
+.house-display {
+  position: absolute;
+  top: 40vh;
+  width: 88vw;
+}
+
+#house {
+  width: 100%;
+  z-index: -1;
+}
+
 .layout {
   width: 100vw;
   display: flex;
@@ -9,7 +20,7 @@
 
 .room {
   position: absolute;
-  height: 220px;
+  height: 35.1%;
   border: 1px solid black;
 }
 
@@ -24,25 +35,25 @@
 }
 
 #electronics {
-  top: calc(20vh + 150px);
-  left: 230px;
-  width: 490px;
+  top: 26.5%;
+  left: 25.2%;
+  width: 54.5%;
 }
 
 #hvac {
-  top: calc(20vh + 150px);
-  left: 30px;
-  width: 200px;
+  top: 26.5%;
+  left: 3.5%;
+  width: 21.4%;
 }
 
 #laundry {
-  top: calc(20vh + 370px);
-  left: 30px;
-  width: 270px;
+  top: 63.7%;
+  left: 3.5%;
+  width: 30.0%;
 }
 
 #kitchen {
-  top: calc(20vh + 370px);
-  left: 300px;
-  width: 550px;
+  top: 63.7%;
+  left: 34.1%;
+  width: 62.7%;
 }

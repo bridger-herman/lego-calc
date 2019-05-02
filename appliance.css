@@ -6,6 +6,7 @@
   border-radius: 5px;
   padding: 5px;
   display: inline-block;
+  z-index: 1;
 }
 
 #appliance-chooser {

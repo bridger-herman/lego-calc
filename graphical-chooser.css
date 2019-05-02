@@ -5,16 +5,10 @@
 
 .small-tron p {
   color: white;
-  filter: drop-shadow(0 0 2px black);
+  filter: drop-shadow(0 0 2pt black);
 }
 
-#house {
-  position: absolute;
-  top: 153px;
-  width: 901px;
-  height: 716px;
-  background-image: url('./img/house.png');
-  background-repeat: no-repeat;
-  background-size: 100% auto;
-  z-index: -1;
+input[type='range']::-webkit-slider-thumb {
+  width: 40px;
+  height: 40px;
 }
