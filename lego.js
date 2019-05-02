@@ -2,10 +2,10 @@
 const IMG_PATH = './img/';
 const IMG_EXT = '.png';
 const NAMES = [
-  'lego_gray_small',
-  'lego_blue_small',
-  'lego_green_small',
-  'lego_red_small',
+  'lego_red',
+  'lego_light_blue',
+  'lego_clear',
+  'lego_black',
 ];
 const CANVAS = document.getElementById('lego-canvas');
 const WIDTH = 70;
