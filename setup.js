@@ -73,7 +73,7 @@ function setup() {
     document.getElementById('final-canvas-container').appendChild(canvas);
     $('#final-bottom').append($('<div/>')
       .append($('<p/>', {text: 'Once you\'re done, tap "Reset" so the next person can enjoy it!'}))
-      .append($('<button/>').html('Reset').on('click', () => window.location.reload()))
+      .append($('<button/>', {class: 'btn btn-primary'}).html('Reset').on('click', () => window.location.reload()))
     );
     plotLegos(calculateNumLegos(kWhPerCategory), canvas);
   });
