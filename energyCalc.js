@@ -30,6 +30,7 @@ function calculateEnergyUsage() {
   let numToasterUses = $('#kitchen').find('#toaster-input').val() || 0;
   let numMicrowaveUses = $('#kitchen').find('#microwave-input').val() || 0;
   let numDishwasherUses = $('#kitchen').find('#dishwasher-input').val() || 0;
+  let hasRefrigerator = $('#kitchen').find('#refrigerator').length > 0;
 
   let numGasDryerUses = $('#laundry').find('#gas-dryer-input').val() || 0;
   let numElectricDryerUses = $('#laundry').find('#electric-dryer-input').val() || 0;
@@ -50,7 +51,7 @@ function calculateEnergyUsage() {
     numToasterUses * 0.1 * WATTAGES['toaster'] +
     numMicrowaveUses * 0.1 * WATTAGES['microwave'] +
     numDishwasherUses * 1.0 * WATTAGES['dishwasher'];
-  let refrigeratorKWH = 1575;
+  let refrigeratorKWH = hasRefrigerator ? 1575 : 0;
   let kitchenYearlyKWH = (kitchenWeeklyWH * 52) / 1000 + refrigeratorKWH;
 
   // Laundry weekly watt hours

@@ -7,3 +7,7 @@
   height: 96vh;
   border: 1px solid black;
 }
+
+#lego-canvas {
+  margin: auto;
+}

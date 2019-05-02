@@ -8,6 +8,7 @@ const NAMES = [
   'lego_red_small',
 ];
 const CANVAS = document.getElementById('lego-canvas');
+const WIDTH = 70;
 
 var LOADED = false;
 
@@ -16,16 +17,16 @@ var LOADED = false;
 function plotLegos(values) {
   loadImages().then((v) => {
     let ctx = CANVAS.getContext('2d');
-    ctx.clearRect(0, 0, 50, 768);
+    ctx.clearRect(0, 0, WIDTH, 768);
     let pieceCount = 0;
     ctx.beginPath();
     for (var i in NAMES) {
       let img = document.getElementById(NAMES[i]);
       for (var piece = 0; piece < values[i]; piece++) {
-        let yCoord = img.height * 0.3 * pieceCount;
-        ctx.drawImage(img, 0, yCoord, 50, 50);
-        ctx.moveTo(25, yCoord + 10);
-        ctx.lineTo(25, yCoord);
+        let yCoord = img.height * 0.4 * pieceCount;
+        ctx.drawImage(img, 0, yCoord, WIDTH, WIDTH);
+        ctx.moveTo(WIDTH / 2, yCoord + WIDTH / 5);
+        ctx.lineTo(WIDTH / 2, yCoord);
         pieceCount++;
       }
     }
