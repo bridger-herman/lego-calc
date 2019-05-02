@@ -1,4 +1,3 @@
-// const DEPLOY_PATH = '/lego-calc'
 const IMG_PATH = './img/';
 const IMG_EXT = '.png';
 const NAMES = [
