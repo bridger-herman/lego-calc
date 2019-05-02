@@ -1,4 +1,56 @@
+const FINAL_TEXT =
+'Now, construct your Lego tower with the Legos provided in the bins! ' +
+'Follow the example towers that already exist on the Lego grid of the metro area. ' +
+'Then, find where you live on the map, and place your Lego tower on the Lego grid.';
+
 function setup() {
+  // Setup behaviour of done button
+  $('#show-final').on('click', (evt) => {
+    let kWhPerCategory = calculateEnergyUsage();
+    let total = totalEnergyUsage(kWhPerCategory);
+    $('body').append($('<div/>', {
+      id: 'final-dialog',
+    })
+      .append($('<div/>', {
+        id: 'final-inner',
+      })
+        .append($('<p/>', {
+          class: 'bold-text',
+          text: `Your total yearly energy usage is about ${total} kWh.`
+        }))
+        .append($('<p/>', {
+          text: `Kitchen appliances: ${Math.floor(kWhPerCategory[0])} kWh`,
+        }))
+        .append($('<p/>', {
+          text: `Laundry: ${Math.floor(kWhPerCategory[1])} kWh`,
+        }))
+        .append($('<p/>', {
+          text: `Air conditioning: ${Math.floor(kWhPerCategory[2])} kWh`,
+        }))
+        .append($('<p/>', {
+          text: `Electronics: ${Math.floor(kWhPerCategory[3])} kWh`,
+        }))
+        .append($('<hr/>'))
+        .append($('<div/>', {
+          id: 'final-bottom',
+        })
+          .append($('<p/>', {text: FINAL_TEXT}))
+          .append($('<div/>', {id: 'final-canvas-container'}))
+        )
+      )
+    );
+    let canvas = document.createElement('canvas');
+    canvas.id = 'final-canvas';
+    canvas.width = 70;
+    canvas.height = 768;
+    document.getElementById('final-canvas-container').appendChild(canvas);
+    $('#final-bottom').append($('<div/>')
+      .append($('<p/>', {text: 'Once you\'re done, tap "Reset" so the next person can enjoy it!'}))
+      .append($('<button/>').html('Reset').on('click', () => window.location.reload()))
+    );
+    plotLegos(calculateNumLegos(kWhPerCategory), canvas);
+  });
+
   plotLegos([0, 0, 0, 0]);
 
   $('.appliance').draggable();

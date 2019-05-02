@@ -35,3 +35,55 @@ input[type='range']::-webkit-slider-thumb {
   margin: 0;
   padding: 0;
 }
+
+#final-dialog {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #222a;
+  z-index: 10;
+}
+
+#final-inner {
+  position: relative;
+  margin: auto;
+  background-color: #eeef;
+  width: 90%;
+  height: 95%;
+}
+
+#final-inner>p {
+  margin: 10px 30px;
+  font-size: 30px;
+}
+
+p.bold-text {
+  font-weight: bold;
+}
+
+#final-bottom {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#final-bottom p {
+  margin: 10px;
+  font-size: 20px;
+}
+#final-bottom>* {
+  width: 33%;
+}
+
+#final-canvas-container {
+  display: flex;
+  justify-content: center;
+}
+#final-canvas {
+  border: 1px solid black;
+}
+

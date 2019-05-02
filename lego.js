@@ -13,9 +13,10 @@ var LOADED = false;
 
 // Values is an array of integers, representing number of legos for each
 // category
-function plotLegos(values) {
+function plotLegos(values, canvas) {
   loadImages().then((v) => {
-    let ctx = CANVAS.getContext('2d');
+    let cv = canvas || CANVAS;
+    let ctx = cv.getContext('2d');
     ctx.clearRect(0, 0, WIDTH, 768);
     let pieceCount = 0;
     ctx.beginPath();

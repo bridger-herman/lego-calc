@@ -12,7 +12,7 @@
   <body>
     <div class="small-tron">
       <p class="lead text-center">
-      Drag the appliances you own into the house, then select your usage!
+      Drag and drop items into the house, select usage, then click "Done!"
       </p>
     </div>
 
@@ -112,26 +112,6 @@
             </div>
           </div>
         </div>
-
-        <div id="color-legend">
-          <div class="legend-entry">
-            <p>Kitchen</p>
-            <img src="./img/lego_red.png">
-          </div>
-          <div class="legend-entry">
-            <p>Laundry</p>
-            <img src="./img/lego_light_blue.png">
-          </div>
-          <div class="legend-entry">
-            <p>A/C</p>
-            <img src="./img/lego_clear.png">
-          </div>
-          <div class="legend-entry">
-            <p>Electronics</p>
-            <img src="./img/lego_black.png">
-          </div>
-        </div>
-
       </div>
 
 
@@ -140,7 +120,7 @@
         <p>About</p>
         <p id="usage-kwh">0 kWh</p>
         <canvas width="70" height="768" id="lego-canvas"></canvas>
-
+        <button id="show-final">Done!</button>
       </div>
     </div>
 
@@ -157,7 +137,7 @@
 
     <script src="./energyCalc.js"></script>
     <script src="./lego.js"></script>
-    <script src="./dragPic.js"></script>
+    <script src="./setup.js"></script>
 
   </body>
 </html>
