@@ -1,5 +1,5 @@
 .small-tron{
-  background: linear-gradient(90deg, #BAF7B9 0%, #A2E4F7 100%);
+  background-color: #BAF7B9;
   height: 4vh;
   margin-bottom: 10px;
 }
@@ -62,6 +62,7 @@ p.bold-text {
 
 #show-final-container {
   display: flex;
+  flex-direction: column;
   background-color: #BAF7B9;
   justify-content: center;
   align-items: center;

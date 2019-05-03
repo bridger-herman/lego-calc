@@ -3,7 +3,7 @@ const GROUPS = {
   'electric-stove': 'kitchen',
   'gas-stove': 'kitchen',
   'electric-oven': 'kitchen',
-  'electric-oven': 'kitchen',
+  'gas-oven': 'kitchen',
   'toaster': 'kitchen',
   'microwave': 'kitchen',
   'dishwasher': 'kitchen',
@@ -107,6 +107,10 @@ function setup() {
       if (!$(dropped).hasClass('noinput')) {
         $(droppedOn).find('.appliance-input').append(
             $('<div/>')
+            .append($('<p/>', {
+              class: 'value-output',
+              text: defaultText,
+            }))
             .append($('<input/>', {
                 type: 'range',
                 class: 'slider',
@@ -115,10 +119,6 @@ function setup() {
                 max: minMaxValStep[1],
                 value: 0,
                 step: minMaxValStep[2],
-            }))
-            .append($('<p/>', {
-              class: 'value-output',
-              text: defaultText,
             }))
         );
       } else {

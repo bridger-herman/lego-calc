@@ -20,7 +20,7 @@
 
 .room {
   position: absolute;
-  height: 35.1%;
+  height: 29.6%;
   border: 1px solid black;
 }
 
@@ -34,26 +34,26 @@
   margin: 0;
 }
 
-#electronics {
-  top: 26.5%;
-  left: 25.2%;
-  width: 54.5%;
-}
-
 #hvac {
-  top: 26.5%;
-  left: 3.5%;
+  top: 11.1%;
+  left: 28.6%;
   width: 21.4%;
 }
 
 #laundry {
-  top: 63.7%;
-  left: 3.5%;
-  width: 30.0%;
+  top: 11.1%;
+  left: 50.0%;
+  width: 28.6%;
+}
+
+#electronics {
+  top: 40.7%;
+  left: 0%;
+  width: 78.6%;
 }
 
 #kitchen {
-  top: 63.7%;
-  left: 34.1%;
-  width: 62.7%;
+  top: 70.4%;
+  left: 0%;
+  width: 100%;
 }
