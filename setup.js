@@ -100,7 +100,7 @@ function setup() {
         minMaxValStep = [0, 1, 0.1];
         defaultText = 'Running 0% time';
       } else if ($(dropped).hasClass('hourly')) {
-        minMaxValStep = [0, 24, 2];
+        minMaxValStep = [0, 24, 1];
         defaultText = '0 Hours/Day';
       }
 
