@@ -1,0 +1,10 @@
+OUTPUT_HEIGHT = 80 # mm
+SCALE = 5000
+
+X_OFFSET = -500.0 # mm
+Y_OFFSET = -200.0 # mm
+Z_OFFSET = 2.0 # mm
+
+STUD_WIDTH = 4.8 # mm
+STUD_HEIGHT = 1.6 # mm
+BRICK_SIZE = 8.0 # mm
