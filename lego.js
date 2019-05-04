@@ -1,13 +1,14 @@
 const IMG_PATH = './img/';
 const IMG_EXT = '.png';
 const NAMES = [
-  'lego_orange',
-  'lego_white',
-  'lego_pink',
-  'lego_yellow',
+  'lego_orange_arrow',
+  'lego_white_arrow',
+  'lego_pink_arrow',
+  'lego_yellow_arrow',
 ];
 const CANVAS = document.getElementById('lego-canvas');
 const WIDTH = 70;
+const HEIGHT = 83;
 
 var LOADED = false;
 
@@ -19,18 +20,14 @@ function plotLegos(values, canvas) {
     let ctx = cv.getContext('2d');
     ctx.clearRect(0, 0, WIDTH, 768);
     let pieceCount = 0;
-    ctx.beginPath();
     for (var i in NAMES) {
       let img = document.getElementById(NAMES[i]);
       for (var piece = 0; piece < values[i]; piece++) {
-        let yCoord = img.height * 0.4 * pieceCount;
-        ctx.drawImage(img, 0, yCoord, WIDTH, WIDTH);
-        ctx.moveTo(WIDTH / 2, yCoord + WIDTH / 5);
-        ctx.lineTo(WIDTH / 2, yCoord);
+        let yCoord = img.height * 0.39 * pieceCount;
+        ctx.drawImage(img, 0, yCoord, WIDTH, HEIGHT);
         pieceCount++;
       }
     }
-    ctx.stroke();
   });
 }
 

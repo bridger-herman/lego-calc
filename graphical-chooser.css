@@ -86,14 +86,15 @@ p.bold-text {
   font-size: 20px;
 }
 #final-bottom>* {
-  width: 33%;
+  width: 45%;
 }
 
 #final-canvas-container {
   display: flex;
   justify-content: center;
-}
-#final-canvas {
-  border: 1px solid black;
+  width: 10%;
 }
 
+#reset-text {
+  width: 30%;
+}

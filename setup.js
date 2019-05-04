@@ -61,7 +61,7 @@ function setup() {
         .append($('<div/>', {
           id: 'final-bottom',
         })
-          .append($('<p/>', {text: FINAL_TEXT}))
+          .append($('<img/>', {src: './img/instructions.png'}))
           .append($('<div/>', {id: 'final-canvas-container'}))
         )
       )
@@ -71,7 +71,7 @@ function setup() {
     canvas.width = 70;
     canvas.height = 768;
     document.getElementById('final-canvas-container').appendChild(canvas);
-    $('#final-bottom').append($('<div/>')
+    $('#final-bottom').append($('<div/>', {id: 'reset-text'})
       .append($('<p/>', {text: 'Once you\'re done, tap "Reset" so the next person can enjoy it!'}))
       .append($('<button/>', {class: 'btn btn-primary'}).html('Reset').on('click', () => window.location.reload()))
     );
